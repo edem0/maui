@@ -1,0 +1,3 @@
+{
+  "SqlConnectionString": "Data Source=.\\sqlexpress;Database=SimpleMovieDB;Trusted_Connection=True;MultipleActiveResultSets=True;TrustServerCertificate=True;"
+}
