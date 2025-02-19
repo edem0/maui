@@ -20,14 +20,20 @@ public class MotorcycleEntity
     [Required]
     public uint Cubic {  get; set; }
 
+    [ForeignKey("Type")]
+    public string TypeName { get; set; }
+    public virtual TypeEntity Type { get; set; }
+
+
     [Required]
     public uint ReleaseYear { get; set; }
+
 
     [Required]
     public uint Cylinders { get; set; }
 
+
     [ForeignKey("Manufacturer")]
     public uint ManufacturerId { get; set; }
-
     public virtual ManufacturerEntity Manufacturer { get; set; }
 }
