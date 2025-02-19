@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{256048E6-59B0-4F60-9263-51C605A5DB61}|Solution.Services\\Solution.Services.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.services\\motorcycleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256048E6-59B0-4F60-9263-51C605A5DB61}|Solution.Services\\Solution.Services.csproj|solutionrelative:solution.services\\motorcycleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\resources\\fonts\\fluentui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\resources\\fonts\\fluentui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\views\\motorcyclelistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\views\\motorcyclelistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\views\\createoreditmotorcycleview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\views\\createoreditmotorcycleview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\views\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\views\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\viewmodels\\motorcyclelistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\viewmodels\\motorcyclelistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\components\\motorcyclelistcomponent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\components\\motorcyclelistcomponent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,25 +51,116 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MotorcycleService.cs",
+              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.Services\\MotorcycleService.cs",
+              "RelativeDocumentMoniker": "Solution.Services\\MotorcycleService.cs",
+              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.Services\\MotorcycleService.cs",
+              "RelativeToolTip": "Solution.Services\\MotorcycleService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAiwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T08:35:09.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FluentUI.cs",
+              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Resources\\Fonts\\FluentUI.cs",
+              "RelativeDocumentMoniker": "Solution.DesktopApp\\Resources\\Fonts\\FluentUI.cs",
+              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Resources\\Fonts\\FluentUI.cs",
+              "RelativeToolTip": "Solution.DesktopApp\\Resources\\Fonts\\FluentUI.cs",
+              "ViewState": "AgIAAOUOAAAAAAAAAAAUwPYOAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T08:35:04.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MotorcycleListComponent.xaml",
+              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Components\\MotorcycleListComponent.xaml",
+              "RelativeDocumentMoniker": "Solution.DesktopApp\\Components\\MotorcycleListComponent.xaml",
+              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Components\\MotorcycleListComponent.xaml",
+              "RelativeToolTip": "Solution.DesktopApp\\Components\\MotorcycleListComponent.xaml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T08:30:10.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainView.xaml",
+              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\MainView.xaml",
+              "RelativeDocumentMoniker": "Solution.DesktopApp\\Views\\MainView.xaml",
+              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\MainView.xaml",
+              "RelativeToolTip": "Solution.DesktopApp\\Views\\MainView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T08:29:14.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "Solution.DesktopApp\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\AppShell.xaml",
+              "RelativeToolTip": "Solution.DesktopApp\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T08:28:17.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\App.xaml",
+              "RelativeDocumentMoniker": "Solution.DesktopApp\\App.xaml",
+              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\App.xaml",
+              "RelativeToolTip": "Solution.DesktopApp\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T08:28:14.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MotorcycleListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\ViewModels\\MotorcycleListViewModel.cs",
+              "RelativeDocumentMoniker": "Solution.DesktopApp\\ViewModels\\MotorcycleListViewModel.cs",
+              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\ViewModels\\MotorcycleListViewModel.cs",
+              "RelativeToolTip": "Solution.DesktopApp\\ViewModels\\MotorcycleListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T08:27:08.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MotorcycleListView.xaml",
               "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\MotorcycleListView.xaml",
               "RelativeDocumentMoniker": "Solution.DesktopApp\\Views\\MotorcycleListView.xaml",
               "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\MotorcycleListView.xaml",
               "RelativeToolTip": "Solution.DesktopApp\\Views\\MotorcycleListView.xaml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAQwEsAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-19T08:25:09.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CreateOrEditMotorcycleView.xaml",
               "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\CreateOrEditMotorcycleView.xaml",
               "RelativeDocumentMoniker": "Solution.DesktopApp\\Views\\CreateOrEditMotorcycleView.xaml",
               "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\CreateOrEditMotorcycleView.xaml",
               "RelativeToolTip": "Solution.DesktopApp\\Views\\CreateOrEditMotorcycleView.xaml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEMAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-19T07:36:59.813Z",
               "EditorCaption": ""

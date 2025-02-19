@@ -35,6 +35,7 @@ public class MotorcycleService(AppDbContext dbContext) : IMotorcycleService
                                                 .ExecuteUpdateAsync(x => x.SetProperty(p => p.PublicId, model.Id)
                                                                           .SetProperty(p => p.ManufacturerId, model.Manufacturer.Value.Id)
                                                                           .SetProperty(p => p.Model, model.Model.Value)
+                                                                          .SetProperty(p => p.TypeId, model.Type.Value.Id)
                                                                           .SetProperty(p => p.Cubic, model.Cubic.Value)
                                                                           .SetProperty(p => p.ReleaseYear, model.ReleaseYear.Value)
                                                                           .SetProperty(p => p.Cylinders, model.NumberOfCylinders.Value));
@@ -76,6 +77,7 @@ public class MotorcycleService(AppDbContext dbContext) : IMotorcycleService
 
         var motorcycles = await dbContext.Motorcycles.AsNoTracking()
                                           .Include(x => x.Manufacturer)
+                                          .Include(x => x.Type)
                                           .Skip(page * ROW_COUNT)
                                           .Take(ROW_COUNT)
                                           .Select(x => new MotorcycleModel(x))
