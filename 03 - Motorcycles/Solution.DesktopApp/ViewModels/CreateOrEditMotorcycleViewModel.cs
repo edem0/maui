@@ -13,6 +13,7 @@ public partial class CreateOrEditMotorcycleViewModel(
 
     #region validation commands
     public IRelayCommand ManufacturerIndexChangedCommand => new RelayCommand(() => this.Manufacturer.Validate());
+    public IRelayCommand TypeIndexChangedCommand => new RelayCommand(() => this.Type.Validate());
     public IRelayCommand CylindersIndexChangedCommand => new RelayCommand(() => this.NumberOfCylinders.Validate());
     public IRelayCommand ModelValidationCommand => new RelayCommand(() => this.Model.Validate());
     public IRelayCommand CubicValidationCommand => new RelayCommand(() => this.Cubic.Validate());
@@ -31,11 +32,15 @@ public partial class CreateOrEditMotorcycleViewModel(
     private IList<ManufacturerModel> manufacturers = [];
 
     [ObservableProperty]
+    private IList<TypeModel> types = [];
+
+    [ObservableProperty]
     private IList<uint> cylinders = [1, 2, 3, 4, 6, 8];
 
     public async void ApplyQueryAttributes(IDictionary<string, object> query)
     {
         await Task.Run(() => LoadManufacturers());
+        await Task.Run(() => LoadTypes());
 
         bool hasValue = query.TryGetValue("Motorcycle", out object result);
 
@@ -53,6 +58,7 @@ public partial class CreateOrEditMotorcycleViewModel(
         this.Model.Value = motorcycle.Model.Value;
         this.ReleaseYear.Value = motorcycle.ReleaseYear.Value;
         this.Cubic.Value = motorcycle.Cubic.Value;
+        this.Type.Value = motorcycle.Type.Value;
         this.NumberOfCylinders.Value = motorcycle.NumberOfCylinders.Value;
 
         asyncButtonAction = OnUpdateAsync;
@@ -110,11 +116,20 @@ public partial class CreateOrEditMotorcycleViewModel(
                                                         .ToListAsync();
     }
 
+    private async Task LoadTypes()
+    {
+        Types = await dbContext.Types.AsNoTracking()
+                                    .OrderBy(x => x.Name)
+                                    .Select(x => new TypeModel(x))
+                                    .ToListAsync();
+    }
+
     private void ClearForm()
     {
         this.Manufacturer.Value = null;
         this.Model.Value = null;
         this.Cubic.Value = null;
+        this.Type.Value = null;
         this.ReleaseYear.Value = null;
         this.NumberOfCylinders.Value = null;
     }
@@ -124,6 +139,7 @@ public partial class CreateOrEditMotorcycleViewModel(
         this.Manufacturer.Validate();
         this.Model.Validate();
         this.Cubic.Validate();
+        this.Type.Validate();
         this.ReleaseYear.Validate();
         this.NumberOfCylinders.Validate();
 
@@ -131,6 +147,7 @@ public partial class CreateOrEditMotorcycleViewModel(
         return (this.Manufacturer?.IsValid ?? false) &&
                this.Model.IsValid &&
                this.Cubic.IsValid &&
+               this.Type.IsValid &&
                this.ReleaseYear.IsValid &&
                (this.NumberOfCylinders?.IsValid ?? false);
     }

@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A7DC4EF-D3F0-456D-980B-CDA450ABE2C1}|Solution.Database\\Solution.Database.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.database\\entities\\motorcycleentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A7DC4EF-D3F0-456D-980B-CDA450ABE2C1}|Solution.Database\\Solution.Database.csproj|solutionrelative:solution.database\\entities\\motorcycleentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\views\\motorcyclelistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\views\\motorcyclelistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|c:\\users\\b1somada\\desktop\\mauiorai\\03 - motorcycles\\solution.desktopapp\\views\\createoreditmotorcycleview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{542885BE-10AA-472C-AECC-AF68FFD90A2D}|Solution.DesktopApp\\Solution.DesktopApp.csproj|solutionrelative:solution.desktopapp\\views\\createoreditmotorcycleview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MotorcycleEntity.cs",
-              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DataBase\\Entities\\MotorcycleEntity.cs",
-              "RelativeDocumentMoniker": "Solution.DataBase\\Entities\\MotorcycleEntity.cs",
-              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DataBase\\Entities\\MotorcycleEntity.cs",
-              "RelativeToolTip": "Solution.DataBase\\Entities\\MotorcycleEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T07:35:58.767Z",
+              "Title": "MotorcycleListView.xaml",
+              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\MotorcycleListView.xaml",
+              "RelativeDocumentMoniker": "Solution.DesktopApp\\Views\\MotorcycleListView.xaml",
+              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\MotorcycleListView.xaml",
+              "RelativeToolTip": "Solution.DesktopApp\\Views\\MotorcycleListView.xaml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T08:25:09.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateOrEditMotorcycleView.xaml",
+              "DocumentMoniker": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\CreateOrEditMotorcycleView.xaml",
+              "RelativeDocumentMoniker": "Solution.DesktopApp\\Views\\CreateOrEditMotorcycleView.xaml",
+              "ToolTip": "C:\\Users\\b1somada\\Desktop\\mauiorai\\03 - Motorcycles\\Solution.DesktopApp\\Views\\CreateOrEditMotorcycleView.xaml",
+              "RelativeToolTip": "Solution.DesktopApp\\Views\\CreateOrEditMotorcycleView.xaml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T07:36:59.813Z",
               "EditorCaption": ""
             }
           ]

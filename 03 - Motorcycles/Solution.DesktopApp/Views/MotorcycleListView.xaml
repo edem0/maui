@@ -34,6 +34,7 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="100" />
                         </Grid.ColumnDefinitions>
 
@@ -46,14 +47,18 @@
                                HorizontalTextAlignment="Center"
                                Style="{x:StaticResource TableHeader}" />
                         <Label Grid.Column="2"
+                               Text="Type"
+                               HorizontalTextAlignment="Center"
+                               Style="{x:StaticResource TableHeader}" />
+                        <Label Grid.Column="3"
                                Text="Release Year"
                                HorizontalTextAlignment="End"
                                Style="{x:StaticResource TableHeader}" />
-                        <Label Grid.Column="3"
+                        <Label Grid.Column="4"
                                Text="Number Of Cylinders"
                                HorizontalTextAlignment="End"
                                Style="{x:StaticResource TableHeader}" />
-                        <Label Grid.Column="4"
+                        <Label Grid.Column="5"
                                Text="Cubic"
                                HorizontalTextAlignment="End"
                                Style="{x:StaticResource TableHeader}" />

@@ -62,6 +62,24 @@
                    Style="{StaticResource ValidationErrorLabelStyle}" />
         </VerticalStackLayout>
 
+
+        
+        <VerticalStackLayout Style="{StaticResource FormLineContainer}">
+            <Label Text="Type"></Label>
+            <Picker ItemsSource="{Binding Types}"
+                    ItemDisplayBinding="{Binding Type}"
+                    SelectedItem="{Binding Type.Value}">
+                <Picker.Behaviors>
+                    <toolkit:EventToCommandBehavior EventName="SelectedIndexChanged"
+                                                    Command="{Binding TypeIndexChangedCommand}" />
+                </Picker.Behaviors>
+            </Picker>
+            <Label Text="{Binding Type.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
+                   Style="{StaticResource ValidationErrorLabelStyle}" />
+        </VerticalStackLayout>
+
+
+        
         <VerticalStackLayout Style="{StaticResource FormLineContainer}">
             <Label Text="Release Year" Style="{StaticResource InputLabel}" />
             <Entry Text="{Binding ReleaseYear.Value}">

@@ -21,9 +21,6 @@
         [ForeignKey("Type")]
         public uint TypeId { get; set; }
 
-        [StringLength(128)]
-        public string TypeName { get; set; }
-
         [Required]
         public uint ReleaseYear { get; set; }
 

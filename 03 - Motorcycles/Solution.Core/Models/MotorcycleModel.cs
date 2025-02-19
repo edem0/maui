@@ -10,7 +10,7 @@
 
         public ValidatableObject<uint?> Cubic { get; protected set; }
 
-        public ValidatableObject<string> TypeName { get; protected set; }
+        public ValidatableObject<TypeModel> Type { get; protected set; }
 
         public ValidatableObject<uint?> ReleaseYear { get; protected set; }
 
@@ -21,7 +21,7 @@
             this.Manufacturer = new ValidatableObject<ManufacturerModel>();
             this.Model = new ValidatableObject<string>();
             this.Cubic = new ValidatableObject<uint?>();
-            this.TypeName = new ValidatableObject<string>();
+            this.Type = new ValidatableObject<TypeModel>();
             this.ReleaseYear = new ValidatableObject<uint?>();
             this.NumberOfCylinders = new ValidatableObject<uint?>();
 
@@ -34,7 +34,7 @@
             this.Manufacturer.Value = new ManufacturerModel(entity.Manufacturer);
             this.Model.Value = entity.Model;
             this.Cubic.Value = entity.Cubic;
-            this.TypeName.Value = entity.TypeName;
+            this.Type.Value = new TypeModel(entity.Type);
             this.ReleaseYear.Value = entity.ReleaseYear;
             this.NumberOfCylinders.Value = entity.Cylinders;
         }
@@ -47,7 +47,7 @@
                 ManufacturerId = Manufacturer.Value.Id,
                 Model = Model.Value,
                 Cubic = Cubic.Value ?? 0,
-                TypeName = TypeName.Value,
+                TypeId = Type.Value.Id,
                 ReleaseYear = ReleaseYear.Value ?? 0,
                 Cylinders = NumberOfCylinders.Value ?? 0
             };
@@ -59,7 +59,7 @@
             entity.ManufacturerId = Manufacturer.Value.Id;
             entity.Model = Model.Value;
             entity.Cubic = Cubic.Value ?? 0;
-            entity.TypeName = TypeName.Value;
+            entity.TypeId = Type.Value.Id;
             entity.ReleaseYear = ReleaseYear.Value ?? 0;
             entity.Cylinders = NumberOfCylinders.Value ?? 0;
         }
@@ -88,9 +88,9 @@
                 }
             ]);
 
-            this.TypeName.Validations.Add(new IsNotNullOrEmptyRule<string>
+            this.Type.Validations.Add(new PickerValidationRule<TypeModel>
             {
-                ValidationMessage = "Type field is required"
+                ValidationMessage = "Type must be selected"
             });
 
             this.ReleaseYear.Validations.AddRange(
