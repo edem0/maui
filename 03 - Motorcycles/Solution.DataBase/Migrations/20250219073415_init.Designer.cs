@@ -11,7 +11,7 @@ using Solution.DataBase;
 namespace Solution.Database.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250116073519_init")]
+    [Migration("20250219073415_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -75,11 +75,41 @@ namespace Solution.Database.Migrations
                     b.Property<long>("ReleaseYear")
                         .HasColumnType("bigint");
 
+                    b.Property<long>("TypeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("TypeName")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ManufacturerId");
 
+                    b.HasIndex("TypeId");
+
                     b.ToTable("Motorcycle");
+                });
+
+            modelBuilder.Entity("Solution.Database.Entities.TypeEntity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Type");
                 });
 
             modelBuilder.Entity("Solution.Database.Entities.MotorcycleEntity", b =>
@@ -90,10 +120,23 @@ namespace Solution.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Solution.Database.Entities.TypeEntity", "Type")
+                        .WithMany("Motorcycles")
+                        .HasForeignKey("TypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Manufacturer");
+
+                    b.Navigation("Type");
                 });
 
             modelBuilder.Entity("Solution.Database.Entities.ManufacturerEntity", b =>
+                {
+                    b.Navigation("Motorcycles");
+                });
+
+            modelBuilder.Entity("Solution.Database.Entities.TypeEntity", b =>
                 {
                     b.Navigation("Motorcycles");
                 });

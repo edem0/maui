@@ -6,6 +6,8 @@ public class AppDbContext() : DbContext
 
 	public DbSet<MotorcycleEntity> Motorcycles { get; set; }
 
+	public DbSet<TypeEntity> Types { get; set; }
+
 	private static string connectionString = string.Empty;
 
 	static AppDbContext()

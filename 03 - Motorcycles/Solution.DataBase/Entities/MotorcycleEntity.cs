@@ -1,39 +1,40 @@
-﻿using System.ComponentModel.Design;
-
-namespace Solution.Database.Entities;
-
-[Table("Motorcycle")]
-public class MotorcycleEntity
+﻿namespace Solution.Database.Entities
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public uint Id { get; set; }
+    [Table("Motorcycle")]
+    public class MotorcycleEntity
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public uint Id { get; set; }
 
-    [StringLength(128)]
-    [Required]
-    public string PublicId { get; set; }
+        [StringLength(128)]
+        [Required]
+        public string PublicId { get; set; }
 
-    [StringLength(128)]
-    [Required]
-    public string Model {  get; set; }
+        [StringLength(128)]
+        [Required]
+        public string Model { get; set; }
 
-    [Required]
-    public uint Cubic {  get; set; }
+        [Required]
+        public uint Cubic { get; set; }
 
-    [ForeignKey("Type")]
-    public string TypeName { get; set; }
-    public virtual TypeEntity Type { get; set; }
+        [ForeignKey("Type")]
+        public uint TypeId { get; set; }
 
+        [StringLength(128)]
+        public string TypeName { get; set; }
 
-    [Required]
-    public uint ReleaseYear { get; set; }
+        [Required]
+        public uint ReleaseYear { get; set; }
 
+        [Required]
+        public uint Cylinders { get; set; }
 
-    [Required]
-    public uint Cylinders { get; set; }
+        [ForeignKey("Manufacturer")]
+        public uint ManufacturerId { get; set; }
 
+        public virtual ManufacturerEntity Manufacturer { get; set; }
 
-    [ForeignKey("Manufacturer")]
-    public uint ManufacturerId { get; set; }
-    public virtual ManufacturerEntity Manufacturer { get; set; }
+        public virtual TypeEntity Type { get; set; }
+    }
 }

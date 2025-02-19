@@ -1,102 +1,114 @@
-﻿namespace Solution.Core.Models;
-
-public partial class MotorcycleModel
+﻿namespace Solution.Core.Models
 {
-    public string Id { get; set; }
-
-    public ValidatableObject<ManufacturerModel> Manufacturer { get; set; }
-
-    public ValidatableObject<string> Model { get; protected set; }
-
-    public ValidatableObject<uint?> Cubic { get; protected set; }
-
-    public ValidatableObject<uint?> ReleaseYear { get; protected set; }
-
-    public ValidatableObject<uint?> NumberOfCylinders { get; protected set; }
-
-    public MotorcycleModel()
+    public partial class MotorcycleModel
     {
-        this.Manufacturer = new ValidatableObject<ManufacturerModel>();
-        this.Model = new ValidatableObject<string>();
-        this.Cubic = new ValidatableObject<uint?>();
-        this.ReleaseYear = new ValidatableObject<uint?>();
-        this.NumberOfCylinders = new ValidatableObject<uint?>();
+        public string Id { get; set; }
 
-        AddValidators();
-    }
+        public ValidatableObject<ManufacturerModel> Manufacturer { get; set; }
 
-    public MotorcycleModel(MotorcycleEntity entity): this()
-    {
-        this.Id = entity.PublicId;
-        this.Manufacturer.Value = new ManufacturerModel(entity.Manufacturer);
-        this.Model.Value = entity.Model;
-        this.Cubic.Value = entity.Cubic;
-        this.ReleaseYear.Value = entity.ReleaseYear;
-        this.NumberOfCylinders.Value = entity.Cylinders;
-    }
+        public ValidatableObject<string> Model { get; protected set; }
 
-    public MotorcycleEntity ToEntity()
-    {
-        return new MotorcycleEntity
+        public ValidatableObject<uint?> Cubic { get; protected set; }
+
+        public ValidatableObject<string> TypeName { get; protected set; }
+
+        public ValidatableObject<uint?> ReleaseYear { get; protected set; }
+
+        public ValidatableObject<uint?> NumberOfCylinders { get; protected set; }
+
+        public MotorcycleModel()
         {
-            PublicId = Id,
-            ManufacturerId = Manufacturer.Value.Id,
-            Model = Model.Value,
-            Cubic = Cubic.Value ?? 0,
-            ReleaseYear = ReleaseYear.Value ?? 0,
-            Cylinders = NumberOfCylinders.Value ?? 0
-        };
-    }
+            this.Manufacturer = new ValidatableObject<ManufacturerModel>();
+            this.Model = new ValidatableObject<string>();
+            this.Cubic = new ValidatableObject<uint?>();
+            this.TypeName = new ValidatableObject<string>();
+            this.ReleaseYear = new ValidatableObject<uint?>();
+            this.NumberOfCylinders = new ValidatableObject<uint?>();
 
-    public void ToEntity(MotorcycleEntity entity)
-    {
-        entity.PublicId = Id;
-        entity.ManufacturerId = Manufacturer.Value.Id;
-        entity.Model = Model.Value;
-        entity.Cubic = Cubic.Value ?? 0;
-        entity.ReleaseYear = ReleaseYear.Value ?? 0;
-        entity.Cylinders = NumberOfCylinders.Value ?? 0;
-    }
+            AddValidators();
+        }
 
-    private void AddValidators()
-    {
-        this.Manufacturer.Validations.Add(new PickerValidationRule<ManufacturerModel>
+        public MotorcycleModel(MotorcycleEntity entity) : this()
         {
-            ValidationMessage = "ManufacturerId must be selected"
-        });
+            this.Id = entity.PublicId;
+            this.Manufacturer.Value = new ManufacturerModel(entity.Manufacturer);
+            this.Model.Value = entity.Model;
+            this.Cubic.Value = entity.Cubic;
+            this.TypeName.Value = entity.TypeName;
+            this.ReleaseYear.Value = entity.ReleaseYear;
+            this.NumberOfCylinders.Value = entity.Cylinders;
+        }
 
-        this.Model.Validations.Add(new IsNotNullOrEmptyRule<string>
+        public MotorcycleEntity ToEntity()
         {
-            ValidationMessage = "Model field is required"
-        });
+            return new MotorcycleEntity
+            {
+                PublicId = Id,
+                ManufacturerId = Manufacturer.Value.Id,
+                Model = Model.Value,
+                Cubic = Cubic.Value ?? 0,
+                TypeName = TypeName.Value,
+                ReleaseYear = ReleaseYear.Value ?? 0,
+                Cylinders = NumberOfCylinders.Value ?? 0
+            };
+        }
 
-        this.Cubic.Validations.AddRange(
-        [
-            new IsNotNullOrEmptyRule<uint?>
-            {
-                ValidationMessage = "Cubic field is required"
-            },
-            new MinValueRule<uint?>(1)
-            {
-                ValidationMessage = "Cubic field must be greater the 0"
-            }
-        ]);
-
-        this.ReleaseYear.Validations.AddRange(
-        [
-            new IsNotNullOrEmptyRule<uint?>
-            {
-                ValidationMessage = "Release Year field is required"
-            },
-            new MaxValueRule<uint?>(DateTime.Now.Year)
-            {
-                ValidationMessage = "Release Year can't be greater then the currnet year"
-            }
-        ]);
-
-        this.NumberOfCylinders.Validations.AddRange(new IsNotNullOrEmptyRule<uint?>
+        public void ToEntity(MotorcycleEntity entity)
         {
-            ValidationMessage = "Number of cylinders must be selected"
-        });
+            entity.PublicId = Id;
+            entity.ManufacturerId = Manufacturer.Value.Id;
+            entity.Model = Model.Value;
+            entity.Cubic = Cubic.Value ?? 0;
+            entity.TypeName = TypeName.Value;
+            entity.ReleaseYear = ReleaseYear.Value ?? 0;
+            entity.Cylinders = NumberOfCylinders.Value ?? 0;
+        }
+
+        private void AddValidators()
+        {
+            this.Manufacturer.Validations.Add(new PickerValidationRule<ManufacturerModel>
+            {
+                ValidationMessage = "ManufacturerId must be selected"
+            });
+
+            this.Model.Validations.Add(new IsNotNullOrEmptyRule<string>
+            {
+                ValidationMessage = "Model field is required"
+            });
+
+            this.Cubic.Validations.AddRange(
+            [
+                new IsNotNullOrEmptyRule<uint?>
+                {
+                    ValidationMessage = "Cubic field is required"
+                },
+                new MinValueRule<uint?>(1)
+                {
+                    ValidationMessage = "Cubic field must be greater than 0"
+                }
+            ]);
+
+            this.TypeName.Validations.Add(new IsNotNullOrEmptyRule<string>
+            {
+                ValidationMessage = "Type field is required"
+            });
+
+            this.ReleaseYear.Validations.AddRange(
+            [
+                new IsNotNullOrEmptyRule<uint?>
+                {
+                    ValidationMessage = "Release Year field is required"
+                },
+                new MaxValueRule<uint?>(DateTime.Now.Year)
+                {
+                    ValidationMessage = "Release Year can't be greater than the current year"
+                }
+            ]);
+
+            this.NumberOfCylinders.Validations.AddRange(new IsNotNullOrEmptyRule<uint?>
+            {
+                ValidationMessage = "Number of cylinders must be selected"
+            });
+        }
     }
 }

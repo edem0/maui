@@ -24,6 +24,19 @@ namespace Solution.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Type",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Type", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Motorcycle",
                 columns: table => new
                 {
@@ -32,7 +45,8 @@ namespace Solution.Database.Migrations
                     PublicId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     Model = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     Cubic = table.Column<long>(type: "bigint", nullable: false),
-                    TypeName = table.Column<string>(type: "nvarchar(128)", nullable: false),
+                    TypeId = table.Column<long>(type: "bigint", nullable: false),
+                    TypeName = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     ReleaseYear = table.Column<long>(type: "bigint", nullable: false),
                     Cylinders = table.Column<long>(type: "bigint", nullable: false),
                     ManufacturerId = table.Column<long>(type: "bigint", nullable: false)
@@ -46,21 +60,13 @@ namespace Solution.Database.Migrations
                         principalTable: "Manufacturer",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Motorcycle_Type_TypeId",
+                        column: x => x.TypeId,
+                        principalTable: "Type",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
-            
-                migrationBuilder.CreateTable(
-                    name: "Type",
-                    columns: table => new
-                        {
-                            Id = table.Column<long>(type: "bigint", nullable: false)
-                                .Annotation("SqlServer:Identity", "1, 1"),
-                            Name = table.Column<string>(type: "nvarchar(64)", nullable: false)
-                        },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Type", x => x.Id);
-                });
-
 
             migrationBuilder.CreateIndex(
                 name: "IX_Manufacturer_Name",
@@ -72,6 +78,11 @@ namespace Solution.Database.Migrations
                 name: "IX_Motorcycle_ManufacturerId",
                 table: "Motorcycle",
                 column: "ManufacturerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Motorcycle_TypeId",
+                table: "Motorcycle",
+                column: "TypeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Type_Name",
