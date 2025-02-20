@@ -35,7 +35,8 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="80" />
                         </Grid.ColumnDefinitions>
 
                         <Label Grid.Column="0"
@@ -52,15 +53,15 @@
                                Style="{x:StaticResource TableHeader}" />
                         <Label Grid.Column="3"
                                Text="Release Year"
-                               HorizontalTextAlignment="End"
+                               HorizontalTextAlignment="Center"
                                Style="{x:StaticResource TableHeader}" />
                         <Label Grid.Column="4"
                                Text="Number Of Cylinders"
-                               HorizontalTextAlignment="End"
+                               HorizontalTextAlignment="Center"
                                Style="{x:StaticResource TableHeader}" />
                         <Label Grid.Column="5"
                                Text="Cubic"
-                               HorizontalTextAlignment="End"
+                               HorizontalTextAlignment="Center"
                                Style="{x:StaticResource TableHeader}" />
                     </Grid>
                 </CollectionView.Header>
@@ -69,7 +70,9 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:MotorcycleModel">
-                        <components:MotorcycleListComponent Motorcycle="{Binding .}" />
+                        <components:MotorcycleListComponent Motorcycle="{Binding .}" 
+                                                            DeleteCommand="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MotorcycleListViewModel}}, Path=DeleteCommand}"
+                                                            CommandParameter="{Binding Id}"/>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
                 <CollectionView.Footer>

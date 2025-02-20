@@ -12,7 +12,8 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0"
@@ -26,17 +27,24 @@
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
             <Label Grid.Column="3"
                    Text="{Binding Motorcycle.ReleaseYear.Value, Source={x:Reference this}}" 
-                   HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
             <Label Grid.Column="4"
                    Text="{Binding Motorcycle.NumberOfCylinders.Value, Source={x:Reference this}}" 
-                   HorizontalTextAlignment="End" />
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"     />
             <Label Grid.Column="5"
                    Text="{Binding Motorcycle.Cubic.Value, Source={x:Reference this}}" 
-                   HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-            <ImageButton Grid.Column="5"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            <ImageButton Grid.Column="6"
                          Source="edit.png"
                          Command="{Binding EditCommand, Source={x:Reference this}}"
                          HorizontalOptions="End" VerticalOptions="Center" 
+                         WidthRequest="25" HeightRequest="25"/>
+            <ImageButton Grid.Column="7"
+                         Source="{AppThemeBinding Light=delete_dark.png, Dark=delete_light.png}"
+                         Command="{Binding DeleteCommand, Source={x:Reference this}}"
+                         CommandParameter="{Binding Motorcycle.Id, Source={x:Reference this}}"
+                         HorizontalOptions="End" VerticalOptions="Center"
+                         BackgroundColor="Transparent"
                          WidthRequest="25" HeightRequest="25"/>
         </Grid>
     </Border>

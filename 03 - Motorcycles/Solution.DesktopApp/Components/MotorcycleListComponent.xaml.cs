@@ -1,3 +1,5 @@
+using CommunityToolkit.Mvvm.Input;
+
 namespace Solution.DesktopApp.Components;
 
 public partial class MotorcycleListComponent : ContentView
@@ -10,11 +12,43 @@ public partial class MotorcycleListComponent : ContentView
          defaultBindingMode: BindingMode.OneWay
     );
 
+
+    public static readonly BindableProperty DeleteCommandProperty = BindableProperty.Create
+    (
+        propertyName: nameof(DeleteCommand),
+        returnType: typeof(IAsyncRelayCommand),
+        declaringType: typeof(MotorcycleListComponent),
+        defaultValue: null,
+        defaultBindingMode: BindingMode.OneWay
+    );
+
+    public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create
+    (
+        propertyName: nameof(CommandParameter),
+        returnType: typeof(string),
+        declaringType: typeof(MotorcycleListComponent),
+        defaultValue: null,
+        defaultBindingMode: BindingMode.OneWay
+    );
+
     public MotorcycleModel Motorcycle
     {
         get => (MotorcycleModel)GetValue(MotorcycleProperty);
         set => SetValue(MotorcycleProperty, value);
     }
+
+    public IAsyncRelayCommand DeleteCommand
+    {
+        get => (IAsyncRelayCommand)GetValue(DeleteCommandProperty);
+        set => SetValue(DeleteCommandProperty, value);
+    }
+
+    public string CommandParameter
+    {
+        get => (string)GetValue(CommandParameterProperty);
+        set => SetValue(CommandParameterProperty, value);
+    }
+
 
     public IAsyncRelayCommand EditCommand => new AsyncRelayCommand(OnEditAsync);
 

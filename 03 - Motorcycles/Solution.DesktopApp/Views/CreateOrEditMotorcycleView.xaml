@@ -67,7 +67,7 @@
         <VerticalStackLayout Style="{StaticResource FormLineContainer}">
             <Label Text="Type"></Label>
             <Picker ItemsSource="{Binding Types}"
-                    ItemDisplayBinding="{Binding Type}"
+                    ItemDisplayBinding="{Binding Name}"
                     SelectedItem="{Binding Type.Value}">
                 <Picker.Behaviors>
                     <toolkit:EventToCommandBehavior EventName="SelectedIndexChanged"
